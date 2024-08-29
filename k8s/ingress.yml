@@ -5,9 +5,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx       # class name has been looked by the ingress controller.
   rules:
-  - host: go-app.niveshsunny.com
+  - host: go-app.niveshsunny.com #only accepts the request if the use hits the host name
     http:
       paths:
       - path: /
