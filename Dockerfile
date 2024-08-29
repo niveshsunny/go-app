@@ -3,7 +3,7 @@ WORKDIR /app
 #copy dependencies file to workdir
 COPY go.mod . 
 # download dependencies 
-RUN go mode download
+RUN go mod download
 COPY . .
 # build the image 
 RUN go build -o main .
